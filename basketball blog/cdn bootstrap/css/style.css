@@ -1,0 +1,74 @@
+.back-cover{
+    position: fixed;
+    z-index: 1;
+    display: none;
+    min-height: 100%;
+    min-width: 100%;
+    top: 0;
+    padding: 0;
+    background-color: #fff;
+    transition: background-color 0.5s;
+    transition: opacity 0.5s;
+    max-height: 0;
+}
+.show{
+    display: block;
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    background-color: #00000041;
+    max-height: 100%;
+    transition: opacity 0.5s;
+}
+svg,
+.btn-close{
+    cursor: pointer;
+}
+.border-light-500{
+    border-left: 2px solid #eee;
+    border-right: 2px solid #eee;
+}
+.bg-light-500{
+    background-color: #eee;
+}
+.bg-light-700{
+    background-color: #ccc;
+}
+.title-accordion:hover{
+    background-color: #ccc;
+}
+.title-accordion{
+    cursor: pointer;
+}
+.accordion > div > div {
+    /* display: none; */
+    transition: all 0.5s;
+    overflow: hidden;
+    padding: 0 15px;
+    max-height: 0;
+}
+.accordion > div.show > div{
+/* display: block; */
+padding: 15px;
+}
+.accordion > div > span:after {
+    content: "\002b";
+}
+.accordion > div.show > span:after {
+    content: "\2212";
+}
+.accordion > div.show:last-child > span{
+    border-radius: 0;
+}
+.accordion > div.show:last-child > div{
+    border-radius: 0 0 10px 10px;
+    border-bottom: 0;
+}
+.accordion > div:last-child > div{
+    border-radius: 0 0 10px 10px;
+    border-bottom: 0;
+}
+.accordion > div:last-child > span{
+    border-radius: 0 0 10px 10px;
+    border-bottom: 0;
+}
